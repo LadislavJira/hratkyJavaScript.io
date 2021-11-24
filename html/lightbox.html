@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/lightbox.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="./carousel.html">CAROUSEL</a></li>
+        <li><a href="./graph.html">GRAF</a></li>
+        <li><a class="active" href="#">LIGHTBOX</a></li>
+        <li><a href="./map.html">MAPA</a></li>
+    </ul>
+    <div class="box">
+        <a data-fslightbox="gallery" href="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__480.jpg"><img src="../images/picture1.jpg"></a>
+        <a data-fslightbox="gallery" href="https://cdn.pixabay.com/photo/2021/09/17/12/07/bird-of-paradise-flower-6632515_960_720.jpg"><img src="../images/picture2.jpg"></a>
+        <a data-fslightbox="gallery" href="https://cdn.pixabay.com/photo/2020/12/30/14/23/waterfall-5873630_960_720.jpg"><img src="../images/picture3.jpg"></a>
+        <a data-fslightbox="gallery" href="https://cdn.pixabay.com/photo/2020/11/20/12/16/city-5761429_960_720.jpg"><img src="../images/picture4.jpg"></a>
+
+    
+
+
+<script src="../scripts/fslightbox.js"></script>
+<script>
+    fsLightboxInstances['first-lightbox'].open(0);
+    fsLightboxInstances['second-lightbox'].props.onOpen = () => console.log('Lightbox open!');
+    
+    
+    fsLightbox.close();
+    
+    
+    const a = document.createElement('a');
+    a.setAttribute('data-fslightbox', 'gallery');
+    a.setAttribute('href', 'images/2.jpg');
+    document.body.appendChild(a);
+
+    refreshFsLightbox();
+
+
+    const lightbox = new FsLightbox();
+
+    // set up props, like sources, types, events etc.
+    lightbox.props.sources = ['example-image.jpg', 'example-video.mp4'];
+    lightbox.props.onInit = () => console.log('Lightbox initialized!');
+
+    lightbox.open();
+</script>
+</body>
+</html>

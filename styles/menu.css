@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+    background-color: beige;
+}
+h1{
+    padding: 200px;
+    font-size: 102px;
+    font-family: Permanent Marker, sans-serif;
+    color:deeppink;
+    letter-spacing: 15px;
+    text-align: center;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0.5em;
+    padding: 0.5em;
+    overflow: hidden;
+}
+ul li a{
+    font-size: 50px;
+    color: deepskyblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Permanent Marker, sans-serif;
+}
+
+
+.slider-container{
+    max-width: 720px;
+    margin: 0.5em auto;
+    overflow: hidden;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box a img{
+    margin: 20px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0.5em auto;
+  }
+
+.map-container{
+    max-width: 600px;
+    margin: 0.5em auto;
+  }
+
+.active{
+    color: deeppink;
+}
